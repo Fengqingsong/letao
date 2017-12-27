@@ -1,0 +1,60 @@
+
+@import 'base.less';
+
+
+#main{
+    background-color: #eee;
+    .category-left{
+        float: left;
+        width: 80px;
+        >ul{
+            >li{
+                width: 80px;
+                height: 45px;
+                border-right: 1px solid #ccc;
+                border-bottom: 1px solid #ccc;
+                &.active{
+                    background-color: #ccc;
+                }
+                a{  
+                    color: #333;
+                    display: block;
+                    line-height: 45px;
+                    text-align: center;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .category-right{
+        overflow: hidden;
+        top: 45px;
+        left: 80px;
+        bottom: 50px;
+        width: auto;
+        .mui-scroll{
+            position: relative;
+            padding: 10px;
+            .mui-row{
+                background-color: #fff;
+                >p{
+                    background-color: #eee;
+                }
+                >div{
+                    text-align: center;
+                    >a{
+                        display: block;
+                        >img{
+                            max-width: 100%;                   
+                        }
+                        >p{
+                            font-size: 12px;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
