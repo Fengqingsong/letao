@@ -1,0 +1,69 @@
+// 定义乐淘主题色
+@main-color: #006699;
+// 头部的公共样式
+#header{
+    height: 45px;
+    width: 100%;
+    background-color: @main-color;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    z-index: 999;
+    >h4{
+        margin: 0;
+        line-height: 45px;
+        font-weight: normal;
+    }
+    >a{
+        color: #fff;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+// 脚部区域
+#footer{
+    height: 50px;
+    background-color: @main-color;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    .mui-row{
+        >div{
+            >a{
+                text-align: center;
+                display: block;
+                font-size: 12px;
+                padding: 11px;
+                color: #fff;
+                &::before{
+                    display: block;
+                    margin-bottom: 2px;
+                    font-size: 16px;
+                }
+                &.active{
+                    color: orange;
+                }
+            }
+        }
+    }
+}
+html,body {
+    height: 100%;
+}
+
+img {
+    vertical-align: middle;
+}
+
+// 公共的主体样式
+#main{
+    padding-top: 45px;
+    padding-bottom: 50px;
+    height: 100%;
+    background-color: #fff;
+}
