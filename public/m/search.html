@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的乐淘搜索页</title>
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet/less" href="./less/search.less">
+    <script src="./lib/less/less.js"></script>
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <a href="./index.html" class="myArrow fa fa-arrow-left"></a>
+        <h4>我的乐淘搜索页</h4>
+    </header>
+
+    <main id="main">
+        <div class="search-form">
+            <input type="search" placeholder="请输入要搜索的商品" class="search-input">
+            <button type="button" class="search-bnt mui-btn mui-btn-primary">搜索</button>
+        </div>
+        <div class="search-history">
+            <div class="search-history-heading">
+                <span>搜索历史</span>
+                <span class="fa fa-trash-o close-history">清空记录</span>
+            </div>
+            <div class="search-history-list">
+                <ul class="mui-table-view">
+                    <li class="mui-table-view-cell">
+                        <a href="#">
+                            手机
+                            <i class="fa fa-times close-history"></i>
+                        </a>
+                    </li>
+                    <li class="mui-table-view-cell">
+                        <a href="#">
+                            手机
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </li>
+                    <li class="mui-table-view-cell">
+                        <a href="#">
+                            手机
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </li>
+                    <li class="mui-table-view-cell">
+                        <a href="#">
+                            手机
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- 底部区域 -->
+    <footer id="footer">
+        <div class="mui-row">
+            <div class="mui-col-xs-3">
+                <a href="./index.html" class="fa fa-home">
+                    首页
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="./category.html" class="fa fa-bars">
+                    分类
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="#" class="fa fa-shopping-cart">
+                    购物车
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="#" class="fa fa-user">
+                    个人中心
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script id="getHistoryTmp" type="text/html">
+        {{each rows as value i}}
+        <li class="mui-table-view-cell">
+            <a href="#">
+                {{value}}
+                <i class="fa fa-times close-history" data-index="{{i}}"></i>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+    <script src="./lib/zepto/zepto.js"></script>
+    <script src="./lib/mui/js/mui.js"></script>
+    <script src="./lib/artTemplate/template.js"></script>
+    <script src="./js/search.js"></script>
+</body>
+
+</html>

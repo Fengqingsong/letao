@@ -19,7 +19,7 @@
         <form action="">
             <input type="search" placeholder="请输入要搜索的商品">
         </form>
-        <a href="#" class="mySearch fa fa-search"></a>
+        <a href="./search.html" class="mySearch fa fa-search"></a>
     </header>
     <!-- 主体区域 -->
     <main id="main">
@@ -70,7 +70,7 @@
             </div>
         </div>
     </footer>
-    <script id="categoryLeftTem" type="text/html">
+    <script id="categoryLeftTmp" type="text/html">
         {{each rows as value i}}
         <li>
             <a href="#" data-id="{{value.id}}">{{value.categoryName}}</a>
@@ -78,7 +78,7 @@
         {{/each}}
     </script>
 
-    <script id="categoryRightTem" type="text/html">
+    <script id="categoryRightTmp" type="text/html">
         <div class="mui-row">
            <p>热门商品</p>
             {{each rows as value i}}

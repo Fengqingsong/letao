@@ -23,7 +23,7 @@ function getCategoryLeft(){
         url:'http://localhost:3000/category/queryTopCategory',
         success:function(data){
             // console.log(data);
-            var html = template('categoryLeftTem',data);
+            var html = template('categoryLeftTmp',data);
             // console.log(html);
             $('.category-left ul').html(html);
             $('.category-left ul li').eq(0).addClass('active');
@@ -48,8 +48,8 @@ function getRightData(id){
         url: 'http://localhost:3000/category/querySecondCategory',
         data:{id:id},
         success:function(data){
-            console.log(data);
-            var html = template('categoryRightTem',data);
+            // console.log(data);
+            var html = template('categoryRightTmp',data);
             // console.log(html);
             if(data.rows.length){
                 $('.category-right .mui-scroll').html(html);  
